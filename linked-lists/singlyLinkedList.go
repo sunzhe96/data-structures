@@ -1,4 +1,6 @@
-package list
+package lists
+
+import "fmt"
 
 // | API                  | function                     |
 // |----------------------+------------------------------|
