@@ -13,3 +13,25 @@ This repository contains my implementations of the data structures taught in a D
 - [] Binary Search Trees
 - [] AVL Trees
 - [] Splay Trees
+
+## Linked lists API
+
+| API                  | function                     |
+|----------------------+------------------------------|
+| pushFront(Key)       | add key to front             |
+|                      |                              |
+| topFront()           | return key of the front item |
+|                      |                              |
+| popFront()           | remove the front item        |
+|                      |                              |
+| pushBack()           | add item to back             |
+|                      |                              |
+| topBack()            | return key of back item      |
+|                      |                              |
+| popback()            | remove back item             |
+|                      |                              |
+| find(Key)            | is key in list?              |
+|                      |                              |
+| erase(Key)           | remove key from list         |
+|                      |                              |
+| empty()              | is list empty?               |
