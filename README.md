@@ -18,7 +18,11 @@ This repository contains my implementations of the data structures taught in a D
 
 
 | API                  | function                     |  
+<<<<<<< HEAD
 |----------------------+------------------------------|  
+=======
+|----------------------|------------------------------|  
+>>>>>>> linked-lists
 | pushFront(Key)       | add key to front             |  
 |                      |                              |  
 | topFront()           | return key of the front item |  
