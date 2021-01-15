@@ -1,4 +1,4 @@
-package singlylists
+package lists
 
 import "fmt"
 
