@@ -1,4 +1,4 @@
-package stack
+package stacks
 
 // This is an implementation of stacks based on go's built-in data structure slice
 
@@ -12,27 +12,27 @@ package stack
 // |         |                                             |
 // | empty() | are there any elements?                     |
 
-type stack []int
+type Stack []int
 
-func (s *stack) push(key int) {
+func (s *Stack) Push(key int) {
 	*s = append(*s, key)
 }
 
-func (s *stack) pop() int {
+func (s *Stack) Pop() int {
 	arr := *s
 	res := arr[len(arr)-1]
 	*s = arr[:len(arr)-1]
 	return res
 }
 
-func (s stack) top() int {
-	if s.empty() {
+func (s Stack) Top() int {
+	if s.Empty() {
 		panic("empty stack")
 	}
 	return s[len(s)-1]
 }
 
-func (s stack) empty() bool {
+func (s Stack) Empty() bool {
 	if len(s) == 0 {
 		return true
 	}
