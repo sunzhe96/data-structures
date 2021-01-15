@@ -29,11 +29,11 @@ type node struct {
 	next *node
 }
 
-type list struct {
+type List struct {
 	head *node
 }
 
-func (l *list) pushFront(key int) {
+func (l *List) PushFront(key int) {
 	ptr := l.head
 	newNode := node{
 		key,
@@ -43,10 +43,10 @@ func (l *list) pushFront(key int) {
 	fmt.Printf("pushed %v to the front\n", key)
 }
 
-func (l *list) pushBack(key int) {
-	if l.empty() {
+func (l *List) PushBack(key int) {
+	if l.Empty() {
 		fmt.Println("empty list, use pushFront instead")
-		l.pushFront(key)
+		l.PushFront(key)
 		return
 	}
 
@@ -60,8 +60,8 @@ func (l *list) pushBack(key int) {
 	ptr.next = &newNode
 }
 
-func (l *list) popFront() {
-	if l.empty() {
+func (l *List) PopFront() {
+	if l.Empty() {
 		fmt.Println("error: empty list")
 		return
 	}
@@ -69,8 +69,8 @@ func (l *list) popFront() {
 	l.head = newHead
 }
 
-func (l *list) popBack() {
-	if l.empty() {
+func (l *List) PopBack() {
+	if l.Empty() {
 		fmt.Println("error: empty list")
 		return
 	}
@@ -81,16 +81,16 @@ func (l *list) popBack() {
 	ptr.next = nil
 }
 
-func (l list) topFront() {
-	if l.empty() {
+func (l List) topFront() {
+	if l.Empty() {
 		fmt.Println("error: empty list")
 		return
 	}
 	fmt.Printf("top front is: %v\n", l.head.key)
 }
 
-func (l list) topBack() {
-	if l.empty() {
+func (l List) Topback() {
+	if l.Empty() {
 		fmt.Println("error: empty list")
 		return
 	}
@@ -104,7 +104,7 @@ func (l list) topBack() {
 	fmt.Printf("top back is: %v\n", previous.key)
 }
 
-func (l list) find(key int) bool {
+func (l List) Find(key int) bool {
 	ptr := l.head
 	for ptr != nil {
 		if ptr.key == key {
@@ -115,7 +115,7 @@ func (l list) find(key int) bool {
 	return false
 }
 
-func (l *list) erase(key int) {
+func (l *List) Erase(key int) {
 	ptr := l.head
 	for ptr.next.next != nil {
 		if ptr.next.key == key {
@@ -125,12 +125,12 @@ func (l *list) erase(key int) {
 	}
 }
 
-func (l list) empty() bool {
+func (l List) Empty() bool {
 	return l.head == nil
 }
 
-func (l list) printList() {
-	if l.empty() {
+func (l List) PrintList() {
+	if l.Empty() {
 		fmt.Println("error: empty list")
 		return
 	}
