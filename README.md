@@ -16,25 +16,36 @@ This repository contains my implementations of the data structures taught in a D
 
 ## Linked lists API
 
-
 | API                  | function                     |  
 |----------------------|------------------------------|  
-| pushFront(Key)       | add key to front             |  
+| PushFront(Key)       | add key to front             |  
 |                      |                              |  
-| topFront()           | return key of the front item |  
+| TopFront()           | return key of the front item |  
 |                      |                              |  
-| popFront()           | remove the front item        |  
+| PopFront()           | remove the front item        |  
 |                      |                              |  
-| pushBack()           | add item to back             |  
+| PushBack()           | add item to back             |  
 |                      |                              |  
-| topBack()            | return key of back item      |  
+| TopBack()            | return key of back item      |  
 |                      |                              |  
-| popback()            | remove back item             |  
+| Popback()            | remove back item             |  
 |                      |                              |  
-| find(Key)            | is key in list?              |  
+| Find(Key)            | is key in list?              |  
 |                      |                              |  
-| erase(Key)           | remove key from list         |  
+| Erase(Key)           | remove key from list         |  
 |                      |                              |  
-| empty()              | is list empty?               |  
+| Empty()              | is list empty?               |  
 |                      |                              |  
-| printList()          | print the list               |  
+| PrintList()          | print the list               |  
+
+## Stacks API
+
+| API     | function                                    |  
+|         |                                             |  
+| Push()  | adds key to collection                      |  
+|         |                                             |  
+| Pop()   | removes and returns most recently-added key |  
+|         |                                             |  
+| Top()   | returns most recently-added key             |  
+|         |                                             |  
+| Empty() | are there any elements?                     |  

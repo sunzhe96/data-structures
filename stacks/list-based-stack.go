@@ -4,6 +4,8 @@ import (
 	"github.com/sunzhe96/data-structures/linked-lists"
 )
 
+// This implementation is based on my singly-linked lists library.
+
 // | API     | function                                    |
 // |         |                                             |
 // | Push()  | adds key to collection                      |

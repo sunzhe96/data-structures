@@ -4,13 +4,13 @@ package stacks
 
 // | API     | function                                    |
 // |         |                                             |
-// | push()  | adds key to collection                      |
+// | Push()  | adds key to collection                      |
 // |         |                                             |
-// | pop()   | removes and returns most recently-added key |
+// | Pop()   | removes and returns most recently-added key |
 // |         |                                             |
-// | top()   | returns most recently-added key             |
+// | Top()   | returns most recently-added key             |
 // |         |                                             |
-// | empty() | are there any elements?                     |
+// | Empty() | are there any elements?                     |
 
 type Stack []int
 
