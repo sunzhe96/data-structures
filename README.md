@@ -6,7 +6,7 @@ This repository contains my implementations of the data structures taught in a D
 
 - [X] Linked Lists
 - [X] Stacks
-- [] Quenes
+- [X] Quenes
 - [] Trees
 - [] Priority Quenes
 - [] Disjoint Sets
@@ -52,10 +52,10 @@ This repository contains my implementations of the data structures taught in a D
 
 ## Quenes API
 
-| API       | function                                       |
-|-----------|------------------------------------------------|
-| EnQuene() | Adds key to the collection                     |
-|           |                                                |
-| DeQuene() | removes and returns the least recent-added key |
-|           |                                                |
-| Empty()   | are there any elements?                        |
+| API       | function                                       |  
+|-----------|------------------------------------------------|  
+| EnQuene() | Adds key to the collection                     |  
+|           |                                                |  
+| DeQuene() | removes and returns the least recent-added key |  
+|           |                                                |  
+| Empty()   | are there any elements?                        |  
