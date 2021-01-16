@@ -76,40 +76,40 @@ func (l *DoublyList) PushBack(key int) {
 	fmt.Printf("pushed %v to the back\n", key)
 }
 
-func (l *DoublyList) PopFront() {
+func (l *DoublyList) PopFront() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
 	newHead := l.head.next
+	res := l.head.key
 	l.head = newHead
+	return res
 }
 
-func (l *DoublyList) PopBack() {
+func (l *DoublyList) PopBack() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
-
+	res := l.tail.prev.next.key
 	l.tail.prev.next = nil
 	l.tail = l.tail.prev
+	return res
 }
 
-func (l DoublyList) TopFront() {
+func (l DoublyList) TopFront() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
 	fmt.Printf("top front is: %v\n", l.head.key)
+	return l.head.key
 }
 
-func (l DoublyList) TopBack() {
+func (l DoublyList) TopBack() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
-
 	fmt.Printf("top back is: %v\n", l.tail.key)
+	return l.tail.key
 }
 
 func (l DoublyList) Find(key int) bool {

@@ -49,3 +49,13 @@ This repository contains my implementations of the data structures taught in a D
 | Top()   | returns most recently-added key             |  
 |         |                                             |  
 | Empty() | are there any elements?                     |  
+
+## Quenes API
+
+| API       | function                                       |
+|-----------|------------------------------------------------|
+| EnQuene() | Adds key to the collection                     |
+|           |                                                |
+| DeQuene() | removes and returns the least recent-added key |
+|           |                                                |
+| Empty()   | are there any elements?                        |
