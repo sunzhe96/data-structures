@@ -60,39 +60,42 @@ func (l *List) PushBack(key int) {
 	ptr.next = &newNode
 }
 
-func (l *List) PopFront() {
+func (l *List) PopFront() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
+
 	}
 	newHead := l.head.next
+	res := l.head.key
 	l.head = newHead
+	return res
 }
 
-func (l *List) PopBack() {
+func (l *List) PopBack() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
 	ptr := l.head
 	for ptr.next.next != nil {
 		ptr = ptr.next
 	}
+	res := ptr.next.key
 	ptr.next = nil
+	return res
 }
 
-func (l List) topFront() {
+func (l List) TopFront() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
 	}
 	fmt.Printf("top front is: %v\n", l.head.key)
+	return l.head.key
 }
 
-func (l List) Topback() {
+func (l List) TopBack() int {
 	if l.Empty() {
-		fmt.Println("error: empty list")
-		return
+		panic("error: empty list")
+
 	}
 	var ptr, previous *node
 	ptr = l.head
@@ -102,6 +105,7 @@ func (l List) Topback() {
 		ptr = ptr.next
 	}
 	fmt.Printf("top back is: %v\n", previous.key)
+	return previous.key
 }
 
 func (l List) Find(key int) bool {
