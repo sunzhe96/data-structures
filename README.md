@@ -5,7 +5,7 @@ This repository contains my implementations of the data structures taught in a D
 ## Below is the list of data structures I am working on.
 
 - [X] Linked Lists
-- [] Stacks
+- [X] Stacks
 - [] Quenes
 - [] Trees
 - [] Priority Quenes
