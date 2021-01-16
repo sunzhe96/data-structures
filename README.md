@@ -41,7 +41,7 @@ This repository contains my implementations of the data structures taught in a D
 ## Stacks API
 
 | API     | function                                    |  
-|         |                                             |  
+|---------|---------------------------------------------|  
 | Push()  | adds key to collection                      |  
 |         |                                             |  
 | Pop()   | removes and returns most recently-added key |  
