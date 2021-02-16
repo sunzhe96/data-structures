@@ -65,7 +65,7 @@ This repository contains my implementations of the data structures taught in a D
 ## Hash Tables 
 
 | API                | Operation                                        |  
-|-----------------------------------------------------------------------|  
+|--------------------|--------------------------------------------------|  
 | Search(Key)        | return the corresponding value                   |  
 |                    |                                                  |  
 | Insert(Key, Value) | insert a key-value pair in the dictionary        |  
