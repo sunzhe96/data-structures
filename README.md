@@ -83,3 +83,4 @@ This repository contains my implementations of the data structures taught in a D
 | MakeHashTable()    | initialize a hashtable and return the hash table |  
 |                    |                                                  |  
 | PrintTable()       | print the hash table by each slot                |  
+
