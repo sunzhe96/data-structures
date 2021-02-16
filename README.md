@@ -7,6 +7,7 @@ This repository contains my implementations of the data structures taught in a D
 - [X] Linked Lists
 - [X] Stacks
 - [X] Quenes
+- [X] Hash Tables
 - [] Trees
 - [] Priority Quenes
 - [] Disjoint Sets
@@ -14,7 +15,7 @@ This repository contains my implementations of the data structures taught in a D
 - [] AVL Trees
 - [] Splay Trees
 
-## Linked lists API
+## Linked lists 
 
 | API                  | function                     |  
 |----------------------|------------------------------|  
@@ -38,7 +39,7 @@ This repository contains my implementations of the data structures taught in a D
 |                      |                              |  
 | PrintList()          | print the list               |  
 
-## Stacks API
+## Stacks 
 
 | API     | function                                    |  
 |---------|---------------------------------------------|  
@@ -50,7 +51,7 @@ This repository contains my implementations of the data structures taught in a D
 |         |                                             |  
 | Empty() | are there any elements?                     |  
 
-## Quenes API
+## Quenes 
 
 | API       | function                                       |  
 |-----------|------------------------------------------------|  
@@ -59,3 +60,18 @@ This repository contains my implementations of the data structures taught in a D
 | DeQuene() | removes and returns the least recent-added key |  
 |           |                                                |  
 | Empty()   | are there any elements?                        |  
+
+
+## Hash Tables 
+
+| API                | Operation                                        |  
+|--------------------|--------------------------------------------------|  
+| Search(Key)        | return the corresponding value                   |  
+|                    |                                                  |  
+| Insert(Key, Value) | insert a key-value pair in the dictionary        |  
+|                    |                                                  |  
+| Delete(Key)        | delete the key-value pair                        |  
+|                    |                                                  |  
+| MakeHashTable()    | initialize a hashtable and return the hash table |  
+|                    |                                                  |  
+| PrintTable()       | print the hash table by each slot                |  
