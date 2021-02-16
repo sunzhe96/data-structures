@@ -1,4 +1,4 @@
-package quenes
+package quene
 
 import (
 	"github.com/sunzhe96/data-structures/linked-lists"

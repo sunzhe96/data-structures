@@ -1,4 +1,4 @@
-package stacks
+package stack
 
 import (
 	"github.com/sunzhe96/data-structures/linked-lists"

@@ -1,4 +1,4 @@
-package lists
+package list
 
 import "fmt"
 
@@ -24,61 +24,46 @@ import "fmt"
 // |                      |                              |
 // | PrintList()          | print the list               |
 
-type doublyNode struct {
+type Node struct {
 	key  int
-	next *doublyNode
-	prev *doublyNode
+	next *Node
 }
 
-type DoublyList struct {
-	head *doublyNode
-	tail *doublyNode
+type List struct {
+	head *Node
 }
 
-func (l *DoublyList) PushFront(key int) {
-	newNode := doublyNode{
-		key:  key,
-		next: l.head,
-		prev: nil,
+func (l *List) PushFront(key int) {
+	ptr := l.head
+	newNode := Node{
+		key,
+		ptr,
 	}
-
-	// push to an empty list
-	if l.Empty() {
-		l.head = &newNode
-		l.tail = &newNode
-		fmt.Printf("pushed %v to the back\n", key)
-		return
-	}
-	// push to a non-empty list
-	l.head.prev = &newNode
 	l.head = &newNode
-
 	fmt.Printf("pushed %v to the front\n", key)
 }
 
-func (l *DoublyList) PushBack(key int) {
-	newNode := doublyNode{
-		key:  key,
-		next: nil,
-		prev: l.tail,
-	}
-
-	// push back to an empty list
+func (l *List) PushBack(key int) {
 	if l.Empty() {
 		fmt.Println("empty list, use pushFront instead")
 		l.PushFront(key)
 		return
 	}
 
-	// push back to an non-empty list
-	l.tail.next = &newNode
-	l.tail = &newNode
-	fmt.Printf("pushed %v to the back\n", key)
+	var newNode Node
+	newNode.key = key
+
+	ptr := l.head
+	for ptr.next != nil {
+		ptr = ptr.next
+	}
+	ptr.next = &newNode
 }
 
-func (l *DoublyList) PopFront() int {
+func (l *List) PopFront() int {
 	if l.Empty() {
 		panic("error: empty list")
+
 	}
 	newHead := l.head.next
 	res := l.head.key
@@ -86,17 +71,20 @@ func (l *DoublyList) PopFront() int {
 	return res
 }
 
-func (l *DoublyList) PopBack() int {
+func (l *List) PopBack() int {
 	if l.Empty() {
 		panic("error: empty list")
 	}
-	res := l.tail.prev.next.key
-	l.tail.prev.next = nil
-	l.tail = l.tail.prev
+	ptr := l.head
+	for ptr.next.next != nil {
+		ptr = ptr.next
+	}
+	res := ptr.next.key
+	ptr.next = nil
 	return res
 }
 
-func (l DoublyList) TopFront() int {
+func (l List) TopFront() int {
 	if l.Empty() {
 		panic("error: empty list")
 	}
@@ -104,15 +92,23 @@ func (l DoublyList) TopFront() int {
 	return l.head.key
 }
 
-func (l DoublyList) TopBack() int {
+func (l List) TopBack() int {
 	if l.Empty() {
 		panic("error: empty list")
+
 	}
-	fmt.Printf("top back is: %v\n", l.tail.key)
-	return l.tail.key
+	var ptr, previous *Node
+	ptr = l.head
+
+	for ptr != nil {
+		previous = ptr
+		ptr = ptr.next
+	}
+	fmt.Printf("top back is: %v\n", previous.key)
+	return previous.key
 }
 
-func (l DoublyList) Find(key int) bool {
+func (l List) Find(key int) bool {
 	ptr := l.head
 	for ptr != nil {
 		if ptr.key == key {
@@ -123,7 +119,7 @@ func (l DoublyList) Find(key int) bool {
 	return false
 }
 
-func (l *DoublyList) Erase(key int) {
+func (l *List) Erase(key int) {
 	ptr := l.head
 	for ptr.next.next != nil {
 		if ptr.next.key == key {
@@ -133,11 +129,11 @@ func (l *DoublyList) Erase(key int) {
 	}
 }
 
-func (l DoublyList) Empty() bool {
+func (l List) Empty() bool {
 	return l.head == nil
 }
 
-func (l DoublyList) PrintList() {
+func (l List) PrintList() {
 	if l.Empty() {
 		fmt.Println("error: empty list")
 		return

@@ -1,4 +1,4 @@
-package stacks
+package stack
 
 // This is an implementation of stacks based on go's built-in data structure slice
 
