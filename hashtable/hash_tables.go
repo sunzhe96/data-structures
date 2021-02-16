@@ -5,6 +5,18 @@ import (
 	"fmt"
 )
 
+// | API                | Operation                                        |
+// |--------------------+--------------------------------------------------|
+// | Search(Key)        | return the corresponding value                   |
+// |                    |                                                  |
+// | Insert(Key, Value) | insert a key-value pair in the dictionary        |
+// |                    |                                                  |
+// | Delete(Key)        | delete the key-value pair                        |
+// |                    |                                                  |
+// | MakeHashTable()    | initialize a hashtable and return the hash table |
+// |                    |                                                  |
+// | PrintTable()       | print the hash table by each slot                |
+
 const arraySize = 10
 
 type HashTable struct {
