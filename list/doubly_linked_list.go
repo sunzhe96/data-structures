@@ -2,28 +2,6 @@ package list
 
 import "fmt"
 
-// | API                  | function                     |
-// |----------------------|------------------------------|
-// | PushFront(Key)       | add key to front             |
-// |                      |                              |
-// | TopFront()           | return key of the front item |
-// |                      |                              |
-// | PopFront()           | remove the front item        |
-// |                      |                              |
-// | PushBack()           | add item to back             |
-// |                      |                              |
-// | TopBack()            | return key of back item      |
-// |                      |                              |
-// | Popback()            | remove back item             |
-// |                      |                              |
-// | Find(Key)            | is key in list?              |
-// |                      |                              |
-// | Erase(Key)           | remove key from list         |
-// |                      |                              |
-// | Empty()              | is list empty?               |
-// |                      |                              |
-// | PrintList()          | print the list               |
-
 type doublyNode struct {
 	key  int
 	next *doublyNode
@@ -33,6 +11,11 @@ type doublyNode struct {
 type DoublyList struct {
 	head *doublyNode
 	tail *doublyNode
+}
+
+func NewDoublyList() *DoublyList {
+	l := DoublyList{}
+	return &l
 }
 
 func (l *DoublyList) PushFront(key int) {
@@ -46,14 +29,11 @@ func (l *DoublyList) PushFront(key int) {
 	if l.Empty() {
 		l.head = &newNode
 		l.tail = &newNode
-		fmt.Printf("pushed %v to the back\n", key)
 		return
 	}
 	// push to a non-empty list
 	l.head.prev = &newNode
 	l.head = &newNode
-
-	fmt.Printf("pushed %v to the front\n", key)
 }
 
 func (l *DoublyList) PushBack(key int) {
@@ -65,7 +45,6 @@ func (l *DoublyList) PushBack(key int) {
 
 	// push back to an empty list
 	if l.Empty() {
-		fmt.Println("empty list, use pushFront instead")
 		l.PushFront(key)
 		return
 	}
@@ -73,7 +52,6 @@ func (l *DoublyList) PushBack(key int) {
 	// push back to an non-empty list
 	l.tail.next = &newNode
 	l.tail = &newNode
-	fmt.Printf("pushed %v to the back\n", key)
 }
 
 func (l *DoublyList) PopFront() int {
@@ -100,7 +78,7 @@ func (l DoublyList) TopFront() int {
 	if l.Empty() {
 		panic("error: empty list")
 	}
-	fmt.Printf("top front is: %v\n", l.head.key)
+
 	return l.head.key
 }
 
@@ -108,7 +86,7 @@ func (l DoublyList) TopBack() int {
 	if l.Empty() {
 		panic("error: empty list")
 	}
-	fmt.Printf("top back is: %v\n", l.tail.key)
+
 	return l.tail.key
 }
 
@@ -137,7 +115,7 @@ func (l DoublyList) Empty() bool {
 	return l.head == nil
 }
 
-func (l DoublyList) PrintList() {
+func (l DoublyList) Print() {
 	if l.Empty() {
 		fmt.Println("error: empty list")
 		return

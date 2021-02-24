@@ -13,9 +13,15 @@ type Node struct {
 	Right  *Node
 }
 
-func (t *BST) PrintTree() {
-	t.InorderTreeWalk()
-	fmt.Printf("\n")
+func NewNode(k int) *Node {
+	n := Node{}
+	n.Key = k
+	return &n
+}
+
+func NewBST() *BST {
+	t := BST{}
+	return &t
 }
 
 func (t *BST) InorderTreeWalk() {
@@ -49,6 +55,11 @@ func (t *BST) PostorderTreeWalk() {
 		rightSub.PostorderTreeWalk()
 		fmt.Printf("%d ", ptr.Key)
 	}
+}
+
+func (t *BST) Print() {
+	t.InorderTreeWalk()
+	fmt.Printf("\n")
 }
 
 func (t *BST) Search(k int) *Node {

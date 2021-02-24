@@ -6,13 +6,17 @@ This repository contains my implementations of the data structures taught in a D
 
 The data structures implemented in this repository can only be used to store integer data which is the "int" type in golang.
 
-## Below is the list of data structures I am working on.
+##  The list of data structures I have implemented.
 
 - [X] Linked Lists
 - [X] Stacks
 - [X] Quenes
+<<<<<<< HEAD
 - [X] Hash Tables
 - [] Trees
+=======
+- [X] Binary Search Trees
+>>>>>>> docs
 - [] Priority Quenes
 - [] Disjoint Sets
 - [] Binary Search Trees
@@ -21,27 +25,27 @@ The data structures implemented in this repository can only be used to store int
 
 ## Linked lists 
 
-| API                  | function                     |  
-|----------------------|------------------------------|  
-| PushFront(Key)       | add key to front             |  
-|                      |                              |  
-| TopFront()           | return key of the front item |  
-|                      |                              |  
-| PopFront()           | remove the front item        |  
-|                      |                              |  
-| PushBack()           | add item to back             |  
-|                      |                              |  
-| TopBack()            | return key of back item      |  
-|                      |                              |  
-| Popback()            | remove back item             |  
-|                      |                              |  
-| Find(Key)            | is key in list?              |  
-|                      |                              |  
-| Erase(Key)           | remove key from list         |  
-|                      |                              |  
-| Empty()              | is list empty?               |  
-|                      |                              |  
-| PrintList()          | print the list               |  
+| API                                   | function                     |
+|---------------------------------------|------------------------------|
+| func (l *List) PushFront(key int) int | add key to front             |
+|                                       |                              |
+| func (l *List) TopFront() int         | return key of the front item |
+|                                       |                              |
+| func (l *List) PopFront() int         | remove the front item        |
+|                                       |                              |
+| func (l *List) PushBack() int         | add item to back             |
+|                                       |                              |
+| func (l *List) TopBack() int          | return key of back item      |
+|                                       |                              |
+| func (l *List) Popback() int          | remove back item             |
+|                                       |                              |
+| func (l *List) Find(key int) bool     | is key in list?              |
+|                                       |                              |
+| func (l *List) Erase(key int)         | remove key from list         |
+|                                       |                              |
+| func (l *List) Empty() bool           | is list empty?               |
+|                                       |                              |
+| func (l *List) PrintList()            | print the list               |
 
 ## Stacks 
 
@@ -66,6 +70,7 @@ The data structures implemented in this repository can only be used to store int
 | Empty()   | are there any elements?                        |  
 
 
+<<<<<<< HEAD
 ## Hash Tables 
 
 | API                | Operation                                        |  
@@ -80,3 +85,14 @@ The data structures implemented in this repository can only be used to store int
 |                    |                                                  |  
 | PrintTable()       | print the hash table by each slot                |  
 
+=======
+## Binary Search Trees
+
+| API       | function                                       |  
+|-----------|------------------------------------------------|  
+| EnQuene() | Adds key to the collection                     |  
+|           |                                                |  
+| DeQuene() | removes and returns the least recent-added key |  
+|           |                                                |  
+| Empty()   | are there any elements?                        |  
+>>>>>>> docs
