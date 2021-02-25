@@ -1,6 +1,6 @@
 # Data Structures
 
-This projects is my implementations of some basic data structures. The implementation is in the Go programming language. 
+This project is my implementations of some basic data structures. The implementation is in the Go programming language. 
 
 ## Data Type
 
