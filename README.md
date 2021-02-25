@@ -1,12 +1,12 @@
 # Data Structures
 
-This repository contains my implementations of the data structures taught in a Data Structures Course of Coursera. The implementation is in the Go programming language. 
+This projects is my implementations of some basic data structures. The implementation is in the Go programming language. 
 
 ## Data Type
 
-The data structures implemented in this repository can only be used to store integer data which is the "int" type in golang.
+The data structures in this repository can only be used to store integer data which is the "int" type in golang.
 
-##  The list of data structures I have implemented.
+## List of the data structures implemented
 
 - [X] Linked Lists
 - [X] Stacks
