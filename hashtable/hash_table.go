@@ -21,7 +21,7 @@ type node struct {
 	next  *node
 }
 
-func MakeHashTable() HashTable {
+func New() HashTable {
 	table := &HashTable{}
 	for i := range (*table).array {
 		(*table).array[i] = &slot{}
@@ -29,7 +29,7 @@ func MakeHashTable() HashTable {
 	return *table
 }
 
-func (h *HashTable) PrintTable() {
+func (h *HashTable) Print() {
 	for i := range h.array {
 		ptr := h.array[i].head
 		fmt.Printf("slot %d: ", i)

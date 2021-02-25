@@ -127,8 +127,8 @@ func (t *BST) MaxIter() *Node {
 	return ptr
 }
 
-func (t *Node) Successor() *Node {
-	ptr := t
+func (n *Node) Successor() *Node {
+	ptr := n
 	if ptr.Right != nil {
 		sub := BST{ptr.Right}
 		return sub.Min()
